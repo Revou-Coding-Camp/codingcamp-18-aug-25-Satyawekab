@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful To-Do List</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="pokemnom">
+    <header class="header">
+      <h1>🍨 Colorful App To-Do List</h1>
+      <p class="subtitle">satyaweka27@gmail.com</p>
+    </header>
+
+    <div class="app-wrapper">
+      <!-- Add Task Form -->
+      <div class="form-section">
+        <h2>✨ Add New Task</h2>
+        <form id="todoForm" class="todo-form">
+          <div class="form-group">
+            <label for="taskInput">📝 Task Description</label>
+            <input type="text" id="taskInput" placeholder="What do you need to do?" maxlength="100" required>
+            <span class="error-message" id="taskError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="dateInput">📅 Due Date</label>
+            <input type="date" id="dateInput" required>
+            <span class="error-message" id="dateError"></span>
+          </div>
+          
+          <button type="submit" class="add-btn">
+            <span>➕ Add Task</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <h3>🔍 Filter Tasks</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All Tasks</button>
+          <button class="filter-btn" data-filter="today">Today</button>
+          <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+      </div>
+
+      <!-- Tasks Display -->
+      <div class="tasks-section">
+        <h3>📋 Your Tasks</h3>
+        <div class="task-stats">
+          <span class="stat-item">Total: <span id="totalTasks">0</span></span>
+          <span class="stat-item">Completed: <span id="completedTasks">0</span></span>
+          <span class="stat-item">Pending: <span id="pendingTasks">0</span></span>
+        </div>
+        
+        <div id="tasksList" class="tasks-list">
+          <div class="empty-state">
+            <div class="empty-icon">📝</div>
+            <p>No tasks yet! Add your first task above.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
